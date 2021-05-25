@@ -1,0 +1,23 @@
+[
+  {
+  "project" : "azkaban-test-project",
+  "nodes" : [ {
+    "id" : "test-final",
+    "type" : "command",
+    "in" : [ "test-job-3" ]
+  }, {
+    "id" : "test-job-start",
+    "type" : "java"
+  }, {
+    "id" : "test-job-3",
+    "type" : "java",
+    "in" : [ "test-job-2" ]
+  }, {
+    "id" : "test-job-2",
+    "type" : "java",
+    "in" : [ "test-job-start" ]
+  } ],
+  "flow" : "sample-workflow-by-cdk",
+  "projectId" : 192
+  }
+]
